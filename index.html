@@ -5,17 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FONTS -->
 </head>
 <body>
-    <div class="container">
-        <label for="guessField">Введите число: </label>
-        <input type="text" id="guessField" class="guessField">
-        <input type="submit" value="Выбрать" class="guessSubmit">
-        
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+    <div class="wrapper">
+
+        <div class="wrapper__descript">
+            <h1 class="wrapper__descript-title">Угадайте число</h1>
+            <p class="wrapper__descript-descript">Игра загадала случайное число от 1 до 100. Ваша задача отгадать число, у Вас есть 10 попыток на это. Игра предупредит если число будет больше или меньше загаданного.</p>
+        </div>
+        <!-- /.wrapper__descript -->
+        <div class="form">
+             <label for="guessField">Введите число: </label>
+             <input type="text" id="guessField" class="guessField">
+             <input type="submit" value="Выбрать" class="guessSubmit">
+        </div>
+        <!-- /.form -->
+
+        <div id="container" class="resultParas">
+             <p class="guesses"></p>
+             <p class="lastResult"></p>
+             <p class="lowOrHi"></p>
+        </div>
+        <!-- /.resultParas -->
+
     </div>
+    <!-- /.wrapper -->
 
     <script src="./js/script.js"></script>
 </body>

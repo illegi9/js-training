@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #fff;
+
+    background-color: #140832;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-flow: 1 1 auto;
+    gap: 15px;
+    width: 700px;
+    height: 100vh;
+    max-height: 100%;
+    margin: 0 auto;
+
+    background-color: #6B52A6;
+}
+
+.wrapper__descript-title{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.wrapper__descript-descript{
+    width: 50%;
+    margin: 20px auto;
+    text-align: justify;
+
+}
+
+.resultParas {
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    top:calc(50% + 150px);
+    margin: 0 auto;
+}
+
+.lastResult {
+display: inline-block;
+}
+
+/* Начало стилизации кнопки */
+.guessSubmit {
+    display: inline-block;
+    font-family: inherit;
+    color: #fff;
+    margin-left: 10px;
+    padding: 4px 8px;
+    user-select: none;
+    
+    background-color: #D2006B;
+    border-radius: 10px;
+    border: none;
+
+    transition: background 150ms ease-in-out, box-shadow 100ms ease-in-out;
+}
+
+.guessSubmit:hover {
+    background-color: #E83A93;
+}
+
+.guessSubmit:active {
+    transform: scale(.95);
+}
+
+.guessSubmit:disabled {
+    transition: none;
+    opacity: 0.4;
+    background-color: #D2006B;
+    transform: none;
+}
+/* Конец стилизации кнопки */
+
+/* Стилизация JS кнопки */
+
+button {
+    display: inline-block;
+    font-family: inherit;
+    color: #fff;
+    margin-top: 20px;
+    padding: 4px 8px;
+    user-select: none;
+    
+    background-color: #D2006B;
+    border-radius: 10px;
+    border: none;
+
+    transition: background 150ms ease-in-out, box-shadow 100ms ease-in-out;
+}
+
+button:hover {
+    background-color: #E83A93;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* Конец стилизации JS кнопки */

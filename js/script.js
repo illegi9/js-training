@@ -20,7 +20,7 @@ function checkGuess() {
   
     if (userGuess === randomNumber) {
       lastResult.textContent = 'Поздравляем! Вы угадали число!';
-      lastResult.style.backgroundColor = 'green';
+      lastResult.style.backgroundColor = '#00FF7F';
       lowOrHi.textContent = '';
       setGameOver();
     } else if (guessCount === 10) {
@@ -28,7 +28,7 @@ function checkGuess() {
       setGameOver();
     } else {
       lastResult.textContent = 'Неправильно!';
-      lastResult.style.backgroundColor = 'red';
+      lastResult.style.backgroundColor = '#DC143C';
       if(userGuess < randomNumber) {
         lowOrHi.textContent = 'Ваше число меньше загаданного!';
       } else if(userGuess > randomNumber) {
@@ -48,7 +48,8 @@ function checkGuess() {
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
     resetButton.textContent = 'Начать новую игру';
-    document.body.appendChild(resetButton);
+    resetButton.id = 'container'
+    container.append(resetButton);
     resetButton.addEventListener('click', resetGame);
   }
 
