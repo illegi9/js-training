@@ -14,25 +14,25 @@ guessField.focus();
 function checkGuess() {
     let userGuess = Number(guessField.value);
     if (guessCount === 1) {
-      guesses.textContent = 'Previous guesses: ';
+      guesses.textContent = 'Предыдущие числа: ';
     }
     guesses.textContent += userGuess + ' ';
   
     if (userGuess === randomNumber) {
-      lastResult.textContent = 'Congratulations! You got it right!';
+      lastResult.textContent = 'Поздравляем! Вы угадали число!';
       lastResult.style.backgroundColor = 'green';
       lowOrHi.textContent = '';
       setGameOver();
     } else if (guessCount === 10) {
-      lastResult.textContent = '!!!GAME OVER!!!';
+      lastResult.textContent = 'Вы проиграли!';
       setGameOver();
     } else {
-      lastResult.textContent = 'Wrong!';
+      lastResult.textContent = 'Неправильно!';
       lastResult.style.backgroundColor = 'red';
       if(userGuess < randomNumber) {
-        lowOrHi.textContent = 'Last guess was too low!';
+        lowOrHi.textContent = 'Ваше число меньше загаданного!';
       } else if(userGuess > randomNumber) {
-        lowOrHi.textContent = 'Last guess was too high!';
+        lowOrHi.textContent = 'Ваше число больше загаданного!';
       }
     }
   
@@ -47,7 +47,7 @@ function checkGuess() {
     guessField.disabled = true;
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
-    resetButton.textContent = 'Start new game';
+    resetButton.textContent = 'Начать новую игру';
     document.body.appendChild(resetButton);
     resetButton.addEventListener('click', resetGame);
   }
