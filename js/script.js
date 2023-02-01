@@ -66,6 +66,9 @@ function checkGuess() {
     guessSubmit.disabled = false;
     guessField.value = '';
     guessField.focus();
+    guesses.textContent = '';
+    lastResult.textContent = '';
+    lowOrHi.textContent = '';
   
     lastResult.style.backgroundColor = 'white';
   
